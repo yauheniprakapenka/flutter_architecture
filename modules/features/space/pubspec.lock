@@ -32,13 +32,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.99"
-  space:
-    dependency: "direct main"
-    description:
-      path: "modules/features/space"
-      relative: true
-    source: path
-    version: "1.0.0+1"
   typed_data:
     dependency: transitive
     description:
