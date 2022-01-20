@@ -17,15 +17,17 @@ class SpaceCard extends StatelessWidget {
   Widget build(context) {
     return Container(
       height: 160,
+      width: double.maxFinite,
       margin: const EdgeInsets.all(8),
       clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
-        color: Colors.grey,
+        color: Colors.deepPurple[100],
       ),
       child: Stack(
         children: [
           Positioned(
+            right: 0,
             child: _Image(
               space: space,
             ),
@@ -87,9 +89,13 @@ class _Image extends StatelessWidget {
   Widget build(context) {
     return Hero(
       tag: SpaceHeroTagFactory.makeImageTag(space),
-      child: SizedBox(
+      child: Container(
         height: 100,
-        width: double.infinity,
+        width: 100,
+        clipBehavior: Clip.antiAlias,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(12),
+        ),
         child: DecoratedBox(
           decoration: BoxDecoration(
             image: DecorationImage(
@@ -118,8 +124,11 @@ class _Button extends StatelessWidget {
       child: const SizedBox.square(
         dimension: 40,
         child: ColoredBox(
-          color: Colors.yellow,
-          child: Icon(Icons.add),
+          color: Colors.deepPurple,
+          child: Icon(
+            Icons.more_horiz,
+            color: Colors.white,
+          ),
         ),
       ),
     );

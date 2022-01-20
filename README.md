@@ -5,3 +5,5 @@
 - Модульность
 - BLoC без библиотеки
 - Hero анимация
+
+<img src=".github/demo.gif" height=440>

@@ -14,6 +14,6 @@ final _spaces = List<Space>.generate(6, (index) {
   return Space(
     id: '$index',
     image: 'modules/features/space/assets/spaces/space_${index + 1}.jpg',
-    description: '$index Я помню чудное мгновенье: Передо мной явилась ты, Как мимолетное виденье, Как гений чистой красоты.',
+    description: 'Галактика, в которой находятся Земля, Солнечная система и все отдельные звёзды, видимые невооружённым глазом',
   );
 });

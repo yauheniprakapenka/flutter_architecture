@@ -30,14 +30,14 @@ class SpaceDetailPage extends StatelessWidget {
               ),
             ),
           ),
-          Expanded(
+          Padding(
+            padding: const EdgeInsets.all(8.0),
             child: Center(
               child: Hero(
                 tag: SpaceHeroTagFactory.makeDescriptionTag(space),
                 child: Material(
                   child: Text(
                     space.description,
-                    textAlign: TextAlign.center,
                   ),
                 ),
               ),
