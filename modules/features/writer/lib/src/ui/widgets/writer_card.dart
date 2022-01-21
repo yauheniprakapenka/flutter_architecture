@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:writer/src/domain/entities/writer.dart';
 
+import '../../domain/entities/poem.dart';
+import '../../domain/entities/writer.dart';
 import '../../ui/utils/writer_hero_tag_factory.dart';
 
 class WriterCard extends StatelessWidget {
@@ -15,72 +16,81 @@ class WriterCard extends StatelessWidget {
 
   @override
   Widget build(context) {
-    return Container(
-      height: 160,
-      width: double.maxFinite,
-      margin: const EdgeInsets.all(8),
-      clipBehavior: Clip.antiAlias,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(12),
-        color: Colors.deepPurple[100],
-      ),
-      child: Stack(
-        children: [
-          Positioned(
-            right: 0,
-            child: _Image(
-              writer: writer,
-            ),
+    return GestureDetector(
+      onTap: onPressed,
+      child: Container(
+        height: 160,
+        width: double.maxFinite,
+        margin: const EdgeInsets.all(8),
+        clipBehavior: Clip.antiAlias,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(12),
+          border: Border.all(
+            width: 2,
+            color: Colors.grey[300] ?? Colors.white,
           ),
-          Positioned.fill(
-            top: 100,
-            child: _Description(
-              writer: writer,
-            ),
-          ),
-          Positioned(
-            right: 24,
-            top: 80,
-            child: _Button(onPressed: onPressed),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class _Description extends StatelessWidget {
-  final Writer writer;
-
-  const _Description({
-    Key? key,
-    required this.writer,
-  }) : super(key: key);
-
-  @override
-  Widget build(context) {
-    return Padding(
-      padding: const EdgeInsets.all(16.0),
-      child: Center(
-        child: Hero(
-          tag: WriterHeroTagFactory.makeNameTag(writer),
-          child: Material(
-            color: Colors.transparent,
-            child: Text(
-              writer.name,
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
+        ),
+        child: Column(
+          children: [
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: [
+                        _WriterName(
+                          writer: writer,
+                        ),
+                        const SizedBox(height: 16),
+                        _WriterPoem(
+                          poem: writer.poem.first,
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: _WriterAvatar(
+                    writer: writer,
+                  ),
+                ),
+              ],
+            )
+          ],
         ),
       ),
     );
   }
 }
 
-class _Image extends StatelessWidget {
+class _WriterName extends StatelessWidget {
   final Writer writer;
 
-  const _Image({
+  const _WriterName({
+    Key? key,
+    required this.writer,
+  }) : super(key: key);
+
+  @override
+  Widget build(context) {
+    return Material(
+      color: Colors.transparent,
+      child: Text(
+        writer.name,
+        overflow: TextOverflow.ellipsis,
+        style: const TextStyle(fontWeight: FontWeight.bold),
+      ),
+    );
+  }
+}
+
+class _WriterAvatar extends StatelessWidget {
+  final Writer writer;
+
+  const _WriterAvatar({
     Key? key,
     required this.writer,
   }) : super(key: key);
@@ -88,7 +98,7 @@ class _Image extends StatelessWidget {
   @override
   Widget build(context) {
     return Hero(
-      tag: WriterHeroTagFactory.makeAvatarTag(writer),
+      tag: WriterHeroTagFactory.makeWriterAvatarTag(writer),
       child: Container(
         height: 100,
         width: 100,
@@ -109,28 +119,40 @@ class _Image extends StatelessWidget {
   }
 }
 
-class _Button extends StatelessWidget {
-  final GestureTapCallback onPressed;
+class _WriterPoem extends StatelessWidget {
+  final Poem poem;
 
-  const _Button({
+  const _WriterPoem({
     Key? key,
-    required this.onPressed,
+    required this.poem,
   }) : super(key: key);
 
   @override
   Widget build(context) {
-    return GestureDetector(
-      onTap: onPressed,
-      child: const SizedBox.square(
-        dimension: 40,
-        child: ColoredBox(
-          color: Colors.deepPurple,
-          child: Icon(
-            Icons.more_horiz,
-            color: Colors.white,
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Material(
+          color: Colors.transparent,
+          child: Text(
+            poem.title,
+            overflow: TextOverflow.ellipsis,
+            style: const TextStyle(
+              fontSize: 15,
+              fontStyle: FontStyle.italic,
+            ),
           ),
         ),
-      ),
+        const SizedBox(height: 8),
+        Material(
+          color: Colors.transparent,
+          child: Text(
+            poem.poem,
+            overflow: TextOverflow.ellipsis,
+            maxLines: 4,
+          ),
+        ),
+      ],
     );
   }
 }

@@ -4,8 +4,8 @@ import 'package:get/get.dart';
 import '../../domain/bloc/writer_bloc/writer_bloc.dart';
 import '../../domain/bloc/writer_bloc/writer_event.dart';
 import '../../domain/entities/writer.dart';
-import '../../ui/widgets/writer_card.dart';
 import '../../ui/pages/writer_details_page.dart';
+import '../../ui/widgets/writer_card.dart';
 
 class WritersListPage extends StatefulWidget {
   const WritersListPage({Key? key}) : super(key: key);
@@ -27,7 +27,7 @@ class _WritersListPageState extends State<WritersListPage> {
   Widget build(context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Writers'),
+        title: const Text('Писатели'),
       ),
       body: _WritersList(),
     );

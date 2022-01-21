@@ -8,6 +8,6 @@ ThemeData writerTheme() {
 
 AppBarTheme _buildAppBarTheme() {
   return AppBarTheme(
-    backgroundColor: Colors.deepPurple[600],
+    backgroundColor: Colors.grey[800],
   );
 }

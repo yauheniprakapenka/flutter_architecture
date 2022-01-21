@@ -1,8 +1,8 @@
 import 'dart:async';
 
+import '../../../domain/bloc/writer_bloc/writer_event.dart';
 import '../../../domain/entities/writer.dart';
 import '../../../domain/use_cases/writer_use_cases/get_all_writers_use_case.dart';
-import '../../../domain/bloc/writer_bloc/writer_event.dart';
 
 class WriterBloc {
   final _writers = <Writer>[];

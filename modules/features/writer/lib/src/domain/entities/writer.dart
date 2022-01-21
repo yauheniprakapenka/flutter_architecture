@@ -1,4 +1,4 @@
-import 'package:writer/src/domain/entities/poem.dart';
+import '../../domain/entities/poem.dart';
 
 class Writer {
   final String name;

@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: writerTheme(),
-      home: WritersListPage(),
+      home: const WritersListPage(),
     );
   }
 }
