@@ -4,6 +4,8 @@ import '../../../../../domain/entities/writer.dart';
 const bartoAgniya = Writer(
   name: 'Агния Барто',
   avatar: 'modules/features/writer/assets/writers/barto.jpg',
+  bio:
+      'Стихи отличаются простотой чтения и запоминания. Через них автор на равных обращалась к ребёнку простым языком без лирических отступлений и описаний. ',
   poem: [
     _allForAll,
     _helper,

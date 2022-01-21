@@ -4,6 +4,8 @@ import '../../../../../domain/entities/writer.dart';
 const eseninSergej = Writer(
   name: 'Сергей Есенин',
   avatar: 'modules/features/writer/assets/writers/esenin.jpg',
+  bio:
+      'Сначала выступал в лаптях и рубахе с новокрестьянскими поэтами, затем, облачившись в пиджак и галстук, создавал с имажинистами новую литературу.',
   poem: [
     _letterToWoman,
     _dontRegretdontCalldontCry,

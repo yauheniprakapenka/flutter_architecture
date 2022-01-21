@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../domain/entities/poem.dart';
 import '../../domain/entities/writer.dart';
 import '../../ui/utils/writer_hero_tag_factory.dart';
 
@@ -19,7 +18,7 @@ class WriterCard extends StatelessWidget {
     return GestureDetector(
       onTap: onPressed,
       child: Container(
-        height: 160,
+        height: 144,
         width: double.maxFinite,
         margin: const EdgeInsets.all(8),
         clipBehavior: Clip.antiAlias,
@@ -44,8 +43,8 @@ class WriterCard extends StatelessWidget {
                           writer: writer,
                         ),
                         const SizedBox(height: 16),
-                        _WriterPoem(
-                          poem: writer.poem.first,
+                        _WriterBio(
+                          bio: writer.bio,
                         ),
                       ],
                     ),
@@ -119,12 +118,12 @@ class _WriterAvatar extends StatelessWidget {
   }
 }
 
-class _WriterPoem extends StatelessWidget {
-  final Poem poem;
+class _WriterBio extends StatelessWidget {
+  final String bio;
 
-  const _WriterPoem({
+  const _WriterBio({
     Key? key,
-    required this.poem,
+    required this.bio,
   }) : super(key: key);
 
   @override
@@ -132,25 +131,13 @@ class _WriterPoem extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Material(
-          color: Colors.transparent,
-          child: Text(
-            poem.title,
-            overflow: TextOverflow.ellipsis,
-            style: const TextStyle(
-              fontSize: 15,
-              fontStyle: FontStyle.italic,
-            ),
+        Text(
+          bio,
+          overflow: TextOverflow.ellipsis,
+          style: TextStyle(
+            color: Colors.grey[700],
           ),
-        ),
-        const SizedBox(height: 8),
-        Material(
-          color: Colors.transparent,
-          child: Text(
-            poem.poem,
-            overflow: TextOverflow.ellipsis,
-            maxLines: 4,
-          ),
+          maxLines: 5,
         ),
       ],
     );

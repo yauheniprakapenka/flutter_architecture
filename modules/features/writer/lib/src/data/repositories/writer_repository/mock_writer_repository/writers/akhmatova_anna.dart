@@ -4,6 +4,8 @@ import '../../../../../domain/entities/writer.dart';
 const akhmatovaAnna = Writer(
   name: 'Анна Ахматова',
   avatar: 'modules/features/writer/assets/writers/ahmatova.jpg',
+  bio:
+      'Она стала свидетелем смены эпох — пережила две мировые войны, революцию и блокаду Ленинграда. Свое первое стихотворение Ахматова написала в 11 лет — с тех пор и до конца жизни она не переставала заниматься поэзией.',
   poem: [
     _chatterbox,
     _soOnSo,
