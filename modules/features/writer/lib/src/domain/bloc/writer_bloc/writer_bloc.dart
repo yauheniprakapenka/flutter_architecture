@@ -1,12 +1,13 @@
 import 'dart:async';
 
+
 import '../../../domain/bloc/writer_bloc/writer_event.dart';
 import '../../../domain/entities/writer.dart';
-import '../../../domain/use_cases/writer_use_cases/get_all_writers_use_case.dart';
+import '../../../domain/interacors/writer_interactor.dart';
 
 class WriterBloc {
   final _writers = <Writer>[];
-  final _getAllWritersUseCase = GetAllWritersUseCase();
+  final _writerInteractor = WriterInteractor();
 
   final _stateCntrl = StreamController<List<Writer>>();
   final _eventCntrl = StreamController<WriterEvent>();
@@ -28,7 +29,7 @@ class WriterBloc {
     if (event == WriterEvent.update) {
       _writers.clear();
       _stateCntrl.add(_writers);
-      _writers.addAll(await _getAllWritersUseCase());
+      _writers.addAll(await _writerInteractor.getAllWriters());
     }
     _stateCntrl.add(_writers);
   }
