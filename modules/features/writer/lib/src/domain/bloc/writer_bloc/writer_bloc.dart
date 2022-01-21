@@ -3,7 +3,7 @@ import 'dart:async';
 
 import '../../../domain/bloc/writer_bloc/writer_event.dart';
 import '../../../domain/entities/writer.dart';
-import '../../../domain/interacors/writer_interactor.dart';
+import '../../../domain/interactors/writer_interactor.dart';
 
 class WriterBloc {
   final _writers = <Writer>[];
