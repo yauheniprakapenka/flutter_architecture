@@ -1,9 +1,6 @@
 # flutter_writers
 
-<img src=".github/screen-1.png" width=160>
-<img src=".github/screen-2.png" width=160>
-<img src=".github/screen-3.png" width=160>
-<img src=".github/screen-4.png" width=160>
+<img src=".github/screen-1.png" width=160>  <img src=".github/screen-2.png" width=160>  <img src=".github/screen-3.png" width=160>  <img src=".github/screen-4.png" width=160>
 
 <br>
 
