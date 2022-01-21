@@ -4,8 +4,8 @@ import '../../domain/entities/writer.dart';
 
 class WriterMapper {
   static Writer dtoToEntity(WriterDTO writerDTO) {
-    final poem = writerDTO.poem.map((e) {
-      return Poem(title: e.title, poem: e.poem);
+    final poem = writerDTO.poem.map((poem) {
+      return Poem(title: poem.title, poem: poem.poem);
     }).toList();
 
     return Writer(
