@@ -1,7 +1,7 @@
 import '../../../domain/entities/space.dart';
 import '../../../domain/repositories/space_repository/i_space_repository.dart';
 
-class MockSpaceRepositoryImpl implements ISpaceRepository {
+class MockSpaceRepository implements ISpaceRepository {
   @override
   Future<List<Space>> getAllSpaces() async {
     return Future.delayed(const Duration(seconds: 1)).then((value) {

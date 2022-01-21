@@ -1,29 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
+import '../../../space.dart';
 import '../../domain/entities/space.dart';
-import '../../domain/repositories/space_repository/i_space_repository.dart';
-import '../../domain/bloc/space_bloc/space_bloc.dart';
 import '../../ui/widgets/space_card.dart';
 import '../../ui/pages/space_detail_page.dart';
 
 class SpacePage extends StatefulWidget {
-  final ISpaceRepository spaceRepository;
-  final ISpaceBloc bloc;
-
-  const SpacePage({
-    Key? key,
-    required this.spaceRepository,
-    required this.bloc,
-  }) : super(key: key);
+  const SpacePage({Key? key}) : super(key: key);
 
   @override
   State<SpacePage> createState() => _SpacePageState();
 }
 
 class _SpacePageState extends State<SpacePage> {
+  final SpaceBloc bloc = Get.find();
+
   @override
   void dispose() {
-    widget.bloc.dispose();
+    bloc.dispose();
     super.dispose();
   }
 
@@ -33,23 +28,15 @@ class _SpacePageState extends State<SpacePage> {
       appBar: AppBar(
         title: const Text('Spaces'),
       ),
-      body: _SpaceList(
-        bloc: widget.bloc,
-        spaceRepository: widget.spaceRepository,
-      ),
+      body: _SpaceList(),
     );
   }
 }
 
 class _SpaceList extends StatelessWidget {
-  final ISpaceRepository spaceRepository;
-  final ISpaceBloc bloc;
+  final SpaceBloc bloc = Get.find();
 
-  const _SpaceList({
-    Key? key,
-    required this.bloc,
-    required this.spaceRepository,
-  }) : super(key: key);
+  _SpaceList({Key? key}) : super(key: key);
 
   @override
   Widget build(context) {
@@ -67,14 +54,10 @@ class _SpaceList extends StatelessWidget {
                       ...snapshot.data!
                           .map(
                             (space) => SpaceCard(
-                                space: space,
-                                onPressed: () {
-                                  Navigator.push(context, MaterialPageRoute(
-                                    builder: (context) {
-                                      return SpaceDetailPage(space: space);
-                                    },
-                                  ));
-                                }),
+                              space: space,
+                              onPressed: () =>
+                                  _onSpaceCardPressed(context, space),
+                            ),
                           )
                           .toList(),
                     ],
@@ -93,5 +76,16 @@ class _SpaceList extends StatelessWidget {
 
   Future<void> _onRefresh() async {
     bloc.event.add(SpaceEvent.update);
+  }
+
+  Future<void> _onSpaceCardPressed(BuildContext context, Space space) async {
+    await Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) {
+          return SpaceDetailPage(space: space);
+        },
+      ),
+    );
   }
 }
