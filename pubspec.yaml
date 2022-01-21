@@ -1,5 +1,5 @@
 name: flutter_writers
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: 'none'
 version: 1.0.0+1
 
 environment:
@@ -13,6 +13,10 @@ dependencies:
 
   writer:
     path: modules/features/writer/
+
+dev_dependencies: 
+  flutter_lints: ^1.0.4
+  dart_code_metrics: ^4.9.1    
 
 flutter:
   uses-material-design: true
