@@ -1,4 +1,4 @@
-# flutter_spaces
+# flutter_writers
 
 О проекте:
 - Dependency management: GetX

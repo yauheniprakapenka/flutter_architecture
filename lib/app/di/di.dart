@@ -1,14 +1,12 @@
 import 'package:get/get.dart';
-import 'package:space/space.dart';
+import 'package:writer/writer.dart';
 
 class DI {
   static void addDependencies() {
-    Get.put<ISpaceRepository>(
-      SpaceRepository(
-        localDataSource: MockSpaceRepository(),
+    Get.put<IWriterRepository>(
+      WriterRepository(
+        localDataSource: MockWriterRepository(),
       ),
     );
-
-    Get.put(SpaceBloc());
   }
 }

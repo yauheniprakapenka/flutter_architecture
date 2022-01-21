@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:space/space.dart';
+import 'package:writer/writer.dart';
 
 import 'app/di/di.dart';
-import 'app/theme/app_themes/space_theme.dart';
+import 'app/theme/app_themes/writer_theme.dart';
 
 void main() {
   DI.addDependencies();
@@ -16,8 +16,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: spaceTheme(),
-      home: SpacePage(),
+      theme: writerTheme(),
+      home: WritersListPage(),
     );
   }
 }
