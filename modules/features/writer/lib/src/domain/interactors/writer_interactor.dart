@@ -1,18 +1,11 @@
-import 'package:get/get.dart';
+import 'package:writer/src/domain/di/writer_repository_di.dart';
 
-import '../../data/repositories/writer_repository/i_writer_repository.dart';
-import '../../data/repositories/writer_repository/mock_writer_repository/mock_writer_repository.dart';
-import '../../data/repositories/writer_repository/writer_repository.dart';
 import '../../domain/entities/writer.dart';
 import '../../domain/use_cases/get_all_writers_use_case.dart';
 
 class WriterInteractor {
   WriterInteractor() {
-    Get.put<IWriterRepository>(
-      WriterRepository(
-        localDataSource: MockWriterRepository(),
-      ),
-    );
+    WriterRepositoryDI.addDependencies();
   }
 
   Future<List<Writer>> getAllWriters() async {
