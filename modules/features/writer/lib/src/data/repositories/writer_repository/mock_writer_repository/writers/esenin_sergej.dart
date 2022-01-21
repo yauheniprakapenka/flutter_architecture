@@ -1,7 +1,7 @@
-import '../../../../../domain/entities/poem.dart';
-import '../../../../../domain/entities/writer.dart';
+import '../../../../../data/dto/poem_dto.dart';
+import '../../../../../data/dto/writer_dto.dart';
 
-const eseninSergej = Writer(
+const eseninSergej = WriterDTO(
   name: 'Сергей Есенин',
   avatar: 'modules/features/writer/assets/writers/esenin.jpg',
   bio:
@@ -12,7 +12,7 @@ const eseninSergej = Writer(
   ],
 );
 
-const _letterToWoman = Poem(
+const _letterToWoman = PoemDTO(
   title: 'Письмо женщине',
   poem: '''
 Вы помните,
@@ -33,7 +33,7 @@ const _letterToWoman = Poem(
 ''',
 );
 
-const _dontRegretdontCalldontCry = Poem(
+const _dontRegretdontCalldontCry = PoemDTO(
   title: 'Не жалею, не зову, не плачу…',
   poem: '''
 Не жалею, не зову, не плачу,

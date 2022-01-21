@@ -1,7 +1,7 @@
-import '../../../../../domain/entities/poem.dart';
-import '../../../../../domain/entities/writer.dart';
+import '../../../../../data/dto/poem_dto.dart';
+import '../../../../../data/dto/writer_dto.dart';
 
-const akhmatovaAnna = Writer(
+const akhmatovaAnna = WriterDTO(
   name: 'Анна Ахматова',
   avatar: 'modules/features/writer/assets/writers/ahmatova.jpg',
   bio:
@@ -12,7 +12,7 @@ const akhmatovaAnna = Writer(
   ],
 );
 
-const _chatterbox = Poem(
+const _chatterbox = PoemDTO(
   title: 'Болтунья',
   poem: '''
 Что болтунья Лида, мол,
@@ -32,7 +32,7 @@ const _chatterbox = Poem(
 ''',
 );
 
-const _soOnSo = Poem(
+const _soOnSo = PoemDTO(
   title: 'Так на так',
   poem: '''
 Решили два Ивана 

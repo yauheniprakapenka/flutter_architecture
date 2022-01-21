@@ -1,5 +1,5 @@
+import '../../../data/dto/writer_dto.dart';
 import '../../../data/repositories/writer_repository/i_writer_repository.dart';
-import '../../../domain/entities/writer.dart';
 
 class WriterRepository implements IWriterRepository {
   final IWriterRepository localDataSource;
@@ -9,7 +9,7 @@ class WriterRepository implements IWriterRepository {
   });
 
   @override
-  Future<List<Writer>> getAllWriters() async {
+  Future<List<WriterDTO>> getAllWriters() async {
     return localDataSource.getAllWriters();
   }
 }

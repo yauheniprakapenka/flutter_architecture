@@ -1,5 +1,5 @@
-import '../../../domain/entities/writer.dart';
+import '../../../data/dto/writer_dto.dart';
 
 abstract class IWriterRepository {
-  Future<List<Writer>> getAllWriters();
+  Future<List<WriterDTO>> getAllWriters();
 }

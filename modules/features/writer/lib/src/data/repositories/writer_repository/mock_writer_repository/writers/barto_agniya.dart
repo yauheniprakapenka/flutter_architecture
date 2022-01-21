@@ -1,7 +1,7 @@
-import '../../../../../domain/entities/poem.dart';
-import '../../../../../domain/entities/writer.dart';
+import '../../../../../data/dto/poem_dto.dart';
+import '../../../../../data/dto/writer_dto.dart';
 
-const bartoAgniya = Writer(
+const bartoAgniya = WriterDTO(
   name: 'Агния Барто',
   avatar: 'modules/features/writer/assets/writers/barto.jpg',
   bio:
@@ -12,7 +12,7 @@ const bartoAgniya = Writer(
   ],
 );
 
-const _allForAll = Poem(
+const _allForAll = PoemDTO(
   title: 'Все для всех',
   poem: '''
 Приехали! Приехали!
@@ -34,7 +34,7 @@ const _allForAll = Poem(
 ''',
 );
 
-const _helper = Poem(
+const _helper = PoemDTO(
   title: 'Помощница',
   poem: '''
 У Танюши дел немало,

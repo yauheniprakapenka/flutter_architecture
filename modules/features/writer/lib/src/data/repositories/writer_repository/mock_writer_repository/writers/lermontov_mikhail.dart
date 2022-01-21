@@ -1,7 +1,7 @@
-import '../../../../../domain/entities/poem.dart';
-import '../../../../../domain/entities/writer.dart';
+import '../../../../../data/dto/poem_dto.dart';
+import '../../../../../data/dto/writer_dto.dart';
 
-const lermontovMikhail = Writer(
+const lermontovMikhail = WriterDTO(
   name: 'Михаил Лермонтов',
   avatar: 'modules/features/writer/assets/writers/lermontov.jpg',
   bio:
@@ -11,7 +11,7 @@ const lermontovMikhail = Writer(
   ],
 );
 
-const _borodino = Poem(
+const _borodino = PoemDTO(
   title: 'Бородино',
   poem: '''
 — Скажи-ка, дядя, ведь не даром
