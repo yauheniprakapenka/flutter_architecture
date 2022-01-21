@@ -15,7 +15,7 @@ class WritersListPage extends StatefulWidget {
 }
 
 class _WritersListPageState extends State<WritersListPage> {
-  final WriterBloc bloc = Get.put(WriterBloc());
+  final bloc = Get.put(WriterBloc());
 
   @override
   void dispose() {
