@@ -1,7 +1,7 @@
 import '../../../../../data/dto/poem_dto.dart';
 import '../../../../../data/dto/writer_dto.dart';
 
-const akhmatovaAnna = WriterDTO(
+final akhmatovaAnna = WriterDTO(
   name: 'Анна Ахматова',
   avatar: 'modules/features/writer/assets/writers/ahmatova.jpg',
   bio:

@@ -1,7 +1,7 @@
 import '../../../../../data/dto/poem_dto.dart';
 import '../../../../../data/dto/writer_dto.dart';
 
-const lermontovMikhail = WriterDTO(
+final lermontovMikhail = WriterDTO(
   name: 'Михаил Лермонтов',
   avatar: 'modules/features/writer/assets/writers/lermontov.jpg',
   bio:

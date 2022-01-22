@@ -10,6 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   get: ^4.6.1
+  freezed_annotation: ^0.14.2
 
   writer:
     path: modules/features/writer/
@@ -19,6 +20,8 @@ dependencies:
 dev_dependencies: 
   dart_code_metrics: ^4.9.1    
   flutter_lints: ^1.0.4
+  build_runner: ^2.0.5
+  freezed: ^0.14.2
 
 flutter:
   uses-material-design: true

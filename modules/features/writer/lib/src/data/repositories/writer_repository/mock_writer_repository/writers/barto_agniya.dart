@@ -1,7 +1,7 @@
 import '../../../../../data/dto/poem_dto.dart';
 import '../../../../../data/dto/writer_dto.dart';
 
-const bartoAgniya = WriterDTO(
+final bartoAgniya = WriterDTO(
   name: 'Агния Барто',
   avatar: 'modules/features/writer/assets/writers/barto.jpg',
   bio:

@@ -1,15 +1,18 @@
+import 'package:flutter/foundation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
+
 import '../../data/dto/poem_dto.dart';
 
-class WriterDTO {
-  final String name;
-  final String avatar;
-  final String bio;
-  final List<PoemDTO> poem;
+part 'writer_dto.freezed.dart';
 
-  const WriterDTO({
-    required this.name,
-    required this.avatar,
-    required this.bio,
-    required this.poem,
-  });
+// TODO: remove freezed after home work review
+
+@freezed
+class WriterDTO with _$WriterDTO {
+  factory WriterDTO({
+    required String name,
+    required String avatar,
+    required String bio,
+    required List<PoemDTO> poem,
+  }) = _WriterDTO;
 }

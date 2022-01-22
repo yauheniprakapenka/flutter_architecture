@@ -11,7 +11,7 @@ class MockWriterRepository implements IWriterRepository {
   }
 }
 
-const _allWriters = [
+final _allWriters = [
   eseninSergej,
   akhmatovaAnna,
   bartoAgniya,
