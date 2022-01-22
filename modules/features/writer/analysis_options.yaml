@@ -1,14 +1,17 @@
-# Updated: 21.01.2022
+# Updated: 22.01.2022
 
-########################
-# flutter_lints v1.0.4 #
-########################
+######################################################
+#                flutter_lints v1.0.4                #
+######################################################
 
 include: package:flutter_lints/flutter.yaml
 
 linter:
   rules:
-    # Error rules
+    ###############
+    # Error rules #
+    ###############
+
     # - always_use_package_imports
     - avoid_dynamic_calls
     - avoid_print
@@ -43,7 +46,10 @@ linter:
     - use_key_in_widget_constructors
     - valid_regexps
 
-    # Style rules
+    ###############
+    # Style rules #
+    ###############
+
     - always_declare_return_types
     - always_put_control_body_on_new_line
     # - always_put_required_named_parameters_first
@@ -199,9 +205,9 @@ linter:
     - use_test_throws_matchers
     - void_checks
 
-###########################
-# Dart Code Metric v4.9.1 #
-###########################
+######################################################
+#              Dart Code Metric v4.9.1               #
+######################################################
 
 analyzer:
   plugins:
