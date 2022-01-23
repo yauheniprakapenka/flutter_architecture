@@ -1,5 +1,5 @@
 import '../../../data/dto/writer_dto.dart';
-import '../../../data/repositories/writer_repository/i_writer_repository.dart';
+import '../../../domain/repositories/writer_repository/i_writer_repository.dart';
 
 class WriterRepository implements IWriterRepository {
   final IWriterRepository localDataSource;

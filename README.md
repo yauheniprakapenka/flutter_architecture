@@ -2,24 +2,25 @@
 
 Учебный проект для изучения архитектуры, модульности, менеджеров состояния и DI.
 
-<br>
+О проекте:
 
-# О проекте:
-
-В проекте используется:
-
-- SDK: Dart v2.15.1, Flutter v2.8.1
 - Dependency management: GetX
 - State management: BLoC (не библиотека)
 - Архитектура приложения: Clean Architecture, модульность
 - Анимация: Hero
-- Linters: flutter_lints v1.0.4, dart_code_metrics v4.9.1
+- Linters: flutter_lints, dart_code_metrics
 
 <br>
 
 # Модуль - Writer
 
-Позволяет просматривать писателей и их стихотворения.
+Отображает писателей и их стихотворения.
+
+О модуле:
+- Dependency management: GetX
+- State management: BLoC (не библиотека)
+- Архитектура приложения: Clean Architecture
+- Анимация: Hero
 
 <img src=".github/screen-1.png" width=160>  <img src=".github/screen-2.png" width=160>  <img src=".github/screen-3.png" width=160>  <img src=".github/screen-4.png" width=160>
 
@@ -29,7 +30,7 @@
 
 # Модуль - About app
 
-Создан модуль для генерации информации о проекте через командную строку.
+Генерирует информацию о проекте через командную строку.
 
 Описание использования находится в пакете модуля:
 ```

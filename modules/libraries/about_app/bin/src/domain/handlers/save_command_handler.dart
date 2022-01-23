@@ -4,7 +4,7 @@ import '../../data/ascii_images/ascii_images.dart';
 import '../../data/commands/commands.dart';
 import '../../domain/use_cases/print_available_commands_use_case.dart';
 import '../../domain/use_cases/save_file_use_case.dart';
-import '../use_cases/print_available_images_use_case.dart';
+import '../../domain/use_cases/print_available_images_use_case.dart';
 
 class SaveCommandHandler {
   Future<void> handle(List<String> args) async {
