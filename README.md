@@ -1,12 +1,10 @@
 # flutter_writers
 
-<img src=".github/screen-1.png" width=160>  <img src=".github/screen-2.png" width=160>  <img src=".github/screen-3.png" width=160>  <img src=".github/screen-4.png" width=160>
+Учебный проект для изучения архитектуры, модульности, менеджеров состояния и DI.
 
 <br>
 
 # О проекте:
-
-Учебный проект для просмотра писателей и их стихотворений.
 
 В проекте используется:
 
@@ -19,6 +17,24 @@
 
 <br>
 
-# Demo
+# Модуль - Writer
 
-<img src=".github/demo.gif" height=440>
+Позволяет просматривать писателей и их стихотворения.
+
+<img src=".github/screen-1.png" width=160>  <img src=".github/screen-2.png" width=160>  <img src=".github/screen-3.png" width=160>  <img src=".github/screen-4.png" width=160>
+
+<img src=".github/writer_demo.gif" height=400>
+
+<br>
+
+# Модуль - About app
+
+Создан модуль для генерации информации о проекте через командную строку.
+
+Описание использования находится в пакете модуля:
+```
+modules/libraries/about_app/README.md
+```
+
+<img src="modules/libraries/about_app/.github/about_app_demo.gif" width=600>
+

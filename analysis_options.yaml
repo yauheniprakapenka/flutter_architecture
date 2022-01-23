@@ -1,10 +1,18 @@
-# Updated: 22.01.2022
+# Updated: 23.01.2022
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  plugins:
+    - dart_code_metrics
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+  errors:
+    invalid_annotation_target: ignore  
 
 ######################################################
 #                flutter_lints v1.0.4                #
 ######################################################
-
-include: package:flutter_lints/flutter.yaml
 
 linter:
   rules:
@@ -209,10 +217,6 @@ linter:
 #              Dart Code Metric v4.9.1               #
 ######################################################
 
-analyzer:
-  plugins:
-    - dart_code_metrics
- 
 dart_code_metrics:
   metrics:
     cyclomatic-complexity: 20

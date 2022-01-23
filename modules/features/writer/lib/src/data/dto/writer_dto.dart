@@ -5,7 +5,7 @@ import '../../data/dto/poem_dto.dart';
 
 part 'writer_dto.freezed.dart';
 
-// TODO: remove freezed after home work review
+// TODO(eprakopenko): remove freezed after home work review
 
 @freezed
 class WriterDTO with _$WriterDTO {
