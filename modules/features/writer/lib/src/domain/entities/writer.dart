@@ -1,4 +1,4 @@
-import 'verse.dart';
+import '../../domain/entities/verse.dart';
 
 class Writer {
   final String name;

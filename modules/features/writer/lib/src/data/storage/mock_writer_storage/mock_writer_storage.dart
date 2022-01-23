@@ -1,6 +1,6 @@
-import '../../dto/writer_dto.dart';
-import '../i_writer_storage.dart';
-import 'writers/writers.dart';
+import '../../../data/dto/writer_dto.dart';
+import '../../../data/storage/i_writer_storage.dart';
+import '../../../data/storage/mock_writer_storage/writers/writers.dart';
 
 class MockWriterStorage implements IWriterStorage {
   @override

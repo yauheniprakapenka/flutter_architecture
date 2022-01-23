@@ -20,11 +20,17 @@
 - Dependency management: GetX
 - State management: BLoC (не библиотека)
 - Архитектура приложения: Clean Architecture
+
+    <img src="modules/features/writer/.github/writer_diagram.jpg" height=300>
+
 - Анимация: Hero
 
-<img src=".github/screen-1.png" width=160>  <img src=".github/screen-2.png" width=160>  <img src=".github/screen-3.png" width=160>  <img src=".github/screen-4.png" width=160>
+Демо:
 
-<img src=".github/writer_demo.gif" height=400>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src=".github/screen-1.png" width=160>  <img src=".github/screen-2.png" width=160>  <img src=".github/screen-3.png" width=160>  <img src=".github/screen-4.png" width=160>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src=".github/writer_demo.gif" height=400>
 
 <br>
 
@@ -37,5 +43,12 @@
 modules/libraries/about_app/README.md
 ```
 
-<img src="modules/libraries/about_app/.github/about_app_demo.gif" width=600>
+Демо:
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="modules/libraries/about_app/.github/about_app_demo.gif" width=600>
+
+<br>
+
+# Об авторе
+
+- 📫 Связаться со мной: yauheni.prakapenka@gmail.com | [linkedin](https://www.linkedin.com/in/yauheni-prakapenka/)
