@@ -20,13 +20,13 @@ class _$WriterDTOTearOff {
   _WriterDTO call(
       {required String name,
       required String avatar,
-      required String bio,
-      required List<PoemDTO> poem}) {
+      required String biography,
+      required List<VerseDTO> verses}) {
     return _WriterDTO(
       name: name,
       avatar: avatar,
-      bio: bio,
-      poem: poem,
+      biography: biography,
+      verses: verses,
     );
   }
 }
@@ -38,8 +38,8 @@ const $WriterDTO = _$WriterDTOTearOff();
 mixin _$WriterDTO {
   String get name => throw _privateConstructorUsedError;
   String get avatar => throw _privateConstructorUsedError;
-  String get bio => throw _privateConstructorUsedError;
-  List<PoemDTO> get poem => throw _privateConstructorUsedError;
+  String get biography => throw _privateConstructorUsedError;
+  List<VerseDTO> get verses => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $WriterDTOCopyWith<WriterDTO> get copyWith =>
@@ -50,7 +50,8 @@ mixin _$WriterDTO {
 abstract class $WriterDTOCopyWith<$Res> {
   factory $WriterDTOCopyWith(WriterDTO value, $Res Function(WriterDTO) then) =
       _$WriterDTOCopyWithImpl<$Res>;
-  $Res call({String name, String avatar, String bio, List<PoemDTO> poem});
+  $Res call(
+      {String name, String avatar, String biography, List<VerseDTO> verses});
 }
 
 /// @nodoc
@@ -65,8 +66,8 @@ class _$WriterDTOCopyWithImpl<$Res> implements $WriterDTOCopyWith<$Res> {
   $Res call({
     Object? name = freezed,
     Object? avatar = freezed,
-    Object? bio = freezed,
-    Object? poem = freezed,
+    Object? biography = freezed,
+    Object? verses = freezed,
   }) {
     return _then(_value.copyWith(
       name: name == freezed
@@ -77,14 +78,14 @@ class _$WriterDTOCopyWithImpl<$Res> implements $WriterDTOCopyWith<$Res> {
           ? _value.avatar
           : avatar // ignore: cast_nullable_to_non_nullable
               as String,
-      bio: bio == freezed
-          ? _value.bio
-          : bio // ignore: cast_nullable_to_non_nullable
+      biography: biography == freezed
+          ? _value.biography
+          : biography // ignore: cast_nullable_to_non_nullable
               as String,
-      poem: poem == freezed
-          ? _value.poem
-          : poem // ignore: cast_nullable_to_non_nullable
-              as List<PoemDTO>,
+      verses: verses == freezed
+          ? _value.verses
+          : verses // ignore: cast_nullable_to_non_nullable
+              as List<VerseDTO>,
     ));
   }
 }
@@ -95,7 +96,8 @@ abstract class _$WriterDTOCopyWith<$Res> implements $WriterDTOCopyWith<$Res> {
           _WriterDTO value, $Res Function(_WriterDTO) then) =
       __$WriterDTOCopyWithImpl<$Res>;
   @override
-  $Res call({String name, String avatar, String bio, List<PoemDTO> poem});
+  $Res call(
+      {String name, String avatar, String biography, List<VerseDTO> verses});
 }
 
 /// @nodoc
@@ -111,8 +113,8 @@ class __$WriterDTOCopyWithImpl<$Res> extends _$WriterDTOCopyWithImpl<$Res>
   $Res call({
     Object? name = freezed,
     Object? avatar = freezed,
-    Object? bio = freezed,
-    Object? poem = freezed,
+    Object? biography = freezed,
+    Object? verses = freezed,
   }) {
     return _then(_WriterDTO(
       name: name == freezed
@@ -123,14 +125,14 @@ class __$WriterDTOCopyWithImpl<$Res> extends _$WriterDTOCopyWithImpl<$Res>
           ? _value.avatar
           : avatar // ignore: cast_nullable_to_non_nullable
               as String,
-      bio: bio == freezed
-          ? _value.bio
-          : bio // ignore: cast_nullable_to_non_nullable
+      biography: biography == freezed
+          ? _value.biography
+          : biography // ignore: cast_nullable_to_non_nullable
               as String,
-      poem: poem == freezed
-          ? _value.poem
-          : poem // ignore: cast_nullable_to_non_nullable
-              as List<PoemDTO>,
+      verses: verses == freezed
+          ? _value.verses
+          : verses // ignore: cast_nullable_to_non_nullable
+              as List<VerseDTO>,
     ));
   }
 }
@@ -141,21 +143,21 @@ class _$_WriterDTO with DiagnosticableTreeMixin implements _WriterDTO {
   _$_WriterDTO(
       {required this.name,
       required this.avatar,
-      required this.bio,
-      required this.poem});
+      required this.biography,
+      required this.verses});
 
   @override
   final String name;
   @override
   final String avatar;
   @override
-  final String bio;
+  final String biography;
   @override
-  final List<PoemDTO> poem;
+  final List<VerseDTO> verses;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'WriterDTO(name: $name, avatar: $avatar, bio: $bio, poem: $poem)';
+    return 'WriterDTO(name: $name, avatar: $avatar, biography: $biography, verses: $verses)';
   }
 
   @override
@@ -165,8 +167,8 @@ class _$_WriterDTO with DiagnosticableTreeMixin implements _WriterDTO {
       ..add(DiagnosticsProperty('type', 'WriterDTO'))
       ..add(DiagnosticsProperty('name', name))
       ..add(DiagnosticsProperty('avatar', avatar))
-      ..add(DiagnosticsProperty('bio', bio))
-      ..add(DiagnosticsProperty('poem', poem));
+      ..add(DiagnosticsProperty('biography', biography))
+      ..add(DiagnosticsProperty('verses', verses));
   }
 
   @override
@@ -177,10 +179,11 @@ class _$_WriterDTO with DiagnosticableTreeMixin implements _WriterDTO {
                 const DeepCollectionEquality().equals(other.name, name)) &&
             (identical(other.avatar, avatar) ||
                 const DeepCollectionEquality().equals(other.avatar, avatar)) &&
-            (identical(other.bio, bio) ||
-                const DeepCollectionEquality().equals(other.bio, bio)) &&
-            (identical(other.poem, poem) ||
-                const DeepCollectionEquality().equals(other.poem, poem)));
+            (identical(other.biography, biography) ||
+                const DeepCollectionEquality()
+                    .equals(other.biography, biography)) &&
+            (identical(other.verses, verses) ||
+                const DeepCollectionEquality().equals(other.verses, verses)));
   }
 
   @override
@@ -188,8 +191,8 @@ class _$_WriterDTO with DiagnosticableTreeMixin implements _WriterDTO {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(avatar) ^
-      const DeepCollectionEquality().hash(bio) ^
-      const DeepCollectionEquality().hash(poem);
+      const DeepCollectionEquality().hash(biography) ^
+      const DeepCollectionEquality().hash(verses);
 
   @JsonKey(ignore: true)
   @override
@@ -201,17 +204,17 @@ abstract class _WriterDTO implements WriterDTO {
   factory _WriterDTO(
       {required String name,
       required String avatar,
-      required String bio,
-      required List<PoemDTO> poem}) = _$_WriterDTO;
+      required String biography,
+      required List<VerseDTO> verses}) = _$_WriterDTO;
 
   @override
   String get name => throw _privateConstructorUsedError;
   @override
   String get avatar => throw _privateConstructorUsedError;
   @override
-  String get bio => throw _privateConstructorUsedError;
+  String get biography => throw _privateConstructorUsedError;
   @override
-  List<PoemDTO> get poem => throw _privateConstructorUsedError;
+  List<VerseDTO> get verses => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$WriterDTOCopyWith<_WriterDTO> get copyWith =>

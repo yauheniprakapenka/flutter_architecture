@@ -1,15 +1,15 @@
-import '../../domain/entities/poem.dart';
+import 'verse.dart';
 
 class Writer {
   final String name;
   final String avatar;
-  final String bio;
-  final List<Poem> poem;
+  final String biography;
+  final List<Verse> verses;
 
   const Writer({
     required this.name,
     required this.avatar,
-    required this.bio,
-    required this.poem,
+    required this.biography,
+    required this.verses,
   });
 }

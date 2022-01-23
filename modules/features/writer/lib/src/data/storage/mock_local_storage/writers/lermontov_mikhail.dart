@@ -1,19 +1,19 @@
-import '../../../../../data/dto/poem_dto.dart';
-import '../../../../../data/dto/writer_dto.dart';
+import '../../../../data/dto/verse_dto.dart';
+import '../../../../data/dto/writer_dto.dart';
 
 final lermontovMikhail = WriterDTO(
   name: 'Михаил Лермонтов',
   avatar: 'modules/features/writer/assets/writers/lermontov.jpg',
-  bio:
+  biography:
       'Один из самых известных русских поэтов, и признание к нему пришло еще при жизни. Его творчество, в котором сочетались острые социальные темы с философскими мотивами и личными переживаниями, оказало огромное влияние на поэтов и писателей XIX–XX веков.',
-  poem: [
+  verses: [
     _borodino,
   ],
 );
 
-const _borodino = PoemDTO(
+const _borodino = VerseDTO(
   title: 'Бородино',
-  poem: '''
+  text: '''
 — Скажи-ка, дядя, ведь не даром
 Москва, спаленная пожаром,
 Французу отдана?

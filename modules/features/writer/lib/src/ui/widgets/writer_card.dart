@@ -44,7 +44,7 @@ class WriterCard extends StatelessWidget {
                         ),
                         const SizedBox(height: 16),
                         _WriterBio(
-                          bio: writer.bio,
+                          bio: writer.biography,
                         ),
                       ],
                     ),

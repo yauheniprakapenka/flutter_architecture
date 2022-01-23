@@ -1,20 +1,20 @@
-import '../../../../../data/dto/poem_dto.dart';
-import '../../../../../data/dto/writer_dto.dart';
+import '../../../../data/dto/verse_dto.dart';
+import '../../../../data/dto/writer_dto.dart';
 
 final eseninSergej = WriterDTO(
   name: 'Сергей Есенин',
   avatar: 'modules/features/writer/assets/writers/esenin.jpg',
-  bio:
+  biography:
       'Сначала выступал в лаптях и рубахе с новокрестьянскими поэтами, затем, облачившись в пиджак и галстук, создавал с имажинистами новую литературу.',
-  poem: [
+  verses: [
     _letterToWoman,
     _dontRegretdontCalldontCry,
   ],
 );
 
-const _letterToWoman = PoemDTO(
+const _letterToWoman = VerseDTO(
   title: 'Письмо женщине',
-  poem: '''
+  text: '''
 Вы помните,
 Вы всё, конечно, помните,
 Как я стоял,
@@ -33,9 +33,9 @@ const _letterToWoman = PoemDTO(
 ''',
 );
 
-const _dontRegretdontCalldontCry = PoemDTO(
+const _dontRegretdontCalldontCry = VerseDTO(
   title: 'Не жалею, не зову, не плачу…',
-  poem: '''
+  text: '''
 Не жалею, не зову, не плачу,
 Все пройдет, как с белых яблонь дым.
 Увяданья золотом охваченный,

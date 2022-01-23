@@ -1,20 +1,20 @@
-import '../../../../../data/dto/poem_dto.dart';
-import '../../../../../data/dto/writer_dto.dart';
+import '../../../../data/dto/verse_dto.dart';
+import '../../../../data/dto/writer_dto.dart';
 
 final akhmatovaAnna = WriterDTO(
   name: 'Анна Ахматова',
   avatar: 'modules/features/writer/assets/writers/ahmatova.jpg',
-  bio:
+  biography:
       'Она стала свидетелем смены эпох — пережила две мировые войны, революцию и блокаду Ленинграда. Свое первое стихотворение Ахматова написала в 11 лет — с тех пор и до конца жизни она не переставала заниматься поэзией.',
-  poem: [
+  verses: [
     _chatterbox,
     _soOnSo,
   ],
 );
 
-const _chatterbox = PoemDTO(
+const _chatterbox = VerseDTO(
   title: 'Болтунья',
-  poem: '''
+  text: '''
 Что болтунья Лида, мол,
 Это Вовка выдумал.
 А болтать-то мне когда?
@@ -32,9 +32,9 @@ const _chatterbox = PoemDTO(
 ''',
 );
 
-const _soOnSo = PoemDTO(
+const _soOnSo = VerseDTO(
   title: 'Так на так',
-  poem: '''
+  text: '''
 Решили два Ивана 
 Меняться без обмана.
 

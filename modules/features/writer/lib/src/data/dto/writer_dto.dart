@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../data/dto/poem_dto.dart';
+import 'verse_dto.dart';
 
 part 'writer_dto.freezed.dart';
 
@@ -12,7 +12,7 @@ class WriterDTO with _$WriterDTO {
   factory WriterDTO({
     required String name,
     required String avatar,
-    required String bio,
-    required List<PoemDTO> poem,
+    required String biography,
+    required List<VerseDTO> verses,
   }) = _WriterDTO;
 }

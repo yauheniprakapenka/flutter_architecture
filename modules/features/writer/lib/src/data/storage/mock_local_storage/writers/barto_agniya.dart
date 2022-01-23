@@ -1,20 +1,20 @@
-import '../../../../../data/dto/poem_dto.dart';
-import '../../../../../data/dto/writer_dto.dart';
+import '../../../../data/dto/verse_dto.dart';
+import '../../../../data/dto/writer_dto.dart';
 
 final bartoAgniya = WriterDTO(
   name: 'Агния Барто',
   avatar: 'modules/features/writer/assets/writers/barto.jpg',
-  bio:
+  biography:
       'Стихи отличаются простотой чтения и запоминания. Через них автор на равных обращалась к ребёнку простым языком без лирических отступлений и описаний. ',
-  poem: [
+  verses: [
     _allForAll,
     _helper,
   ],
 );
 
-const _allForAll = PoemDTO(
+const _allForAll = VerseDTO(
   title: 'Все для всех',
-  poem: '''
+  text: '''
 Приехали! Приехали!
 Родители приехали!
 С конфетами, с орехами
@@ -34,9 +34,9 @@ const _allForAll = PoemDTO(
 ''',
 );
 
-const _helper = PoemDTO(
+const _helper = VerseDTO(
   title: 'Помощница',
-  poem: '''
+  text: '''
 У Танюши дел немало,
 У Танюши много дел:
 Утром брату помогала, —

@@ -1,17 +1,16 @@
 import '../../../../data/dto/writer_dto.dart';
-import '../../../../data/repositories/writer_repository/mock_writer_repository/writers/writers.dart';
-import '../../../../domain/repositories/writer_repository/i_writer_repository.dart';
+import '../../../../data/storage/i_writer_storage.dart';
+import '../../../../data/storage/mock_local_storage/writers/writers.dart';
 
-class MockWriterRepository implements IWriterRepository {
+class MockWriterRepository implements IWriterStorage {
   @override
   Future<List<WriterDTO>> getAllWriters() async {
-    return Future.delayed(const Duration(seconds: 1)).then((value) {
-      return _allWriters;
-    });
+    await Future.delayed(const Duration(seconds: 1));
+    return _allWriters;
   }
 }
 
-final _allWriters = [
+final _allWriters = <WriterDTO>[
   eseninSergej,
   akhmatovaAnna,
   bartoAgniya,

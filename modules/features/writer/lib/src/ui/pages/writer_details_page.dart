@@ -32,7 +32,7 @@ class WriterDetailsPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 24),
-            ...writer.poem.map((poem) {
+            ...writer.verses.map((poem) {
               return Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16.0),
                 child: Column(
@@ -45,7 +45,7 @@ class WriterDetailsPage extends StatelessWidget {
                     ),
                     const SizedBox(height: 8),
                     Text(
-                      poem.poem,
+                      poem.text,
                     ),
                   ],
                 ),
