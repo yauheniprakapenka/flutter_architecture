@@ -1,5 +1,9 @@
 # flutter_writers
 
+<p align="center">
+  <img src="https://cdni.rbth.com/rbthmedia/images/2018.02/article/5a799ead85600a02560b32f0.jpg" width=400>
+</p>
+
 Учебный проект для изучения архитектуры, модульности, менеджеров состояния и DI.
 
 О проекте:
@@ -17,11 +21,10 @@
 Отображает писателей и их стихотворения.
 
 О модуле:
-
-- Dependency management: GetX
-- State management: BLoC (не библиотека)
 - Архитектура приложения: Clean Architecture <br>
     <img src="modules/features/writer/.github/writer_diagram.jpg" height=300> <br>
+- Dependency management: GetX
+- State management: BLoC (не библиотека)
 - Анимация: Hero
 
 Демо:
