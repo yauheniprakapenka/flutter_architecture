@@ -17,12 +17,11 @@
 Отображает писателей и их стихотворения.
 
 О модуле:
+
 - Dependency management: GetX
 - State management: BLoC (не библиотека)
-- Архитектура приложения: Clean Architecture
-
-    <img src="modules/features/writer/.github/writer_diagram.jpg" height=300>
-
+- Архитектура приложения: Clean Architecture <br>
+    <img src="modules/features/writer/.github/writer_diagram.jpg" height=300> <br>
 - Анимация: Hero
 
 Демо:
