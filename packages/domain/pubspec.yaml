@@ -1,29 +1,19 @@
-name: flutter_writers
+name: domain
 publish_to: 'none'
 version: 1.0.0+1
 
 environment:
   sdk: ">=2.15.1 <3.0.0"
-  flutter: ^2.8.1
 
 dependencies:
   flutter:
     sdk: flutter
-
   get_it: ^7.2.0
   flutter_bloc: ^7.3.3
 
-  about_app:
-    path: modules/about_app/
-  domain:
-    path: packages/domain/
+  data:
+    path: ../../packages/data/
 
 dev_dependencies: 
   dart_code_metrics: ^4.9.1    
   flutter_lints: ^1.0.4
-
-flutter:
-  uses-material-design: true
-
-  assets:
-  - assets/writers/

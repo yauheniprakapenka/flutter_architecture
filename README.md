@@ -22,7 +22,7 @@
 
 О модуле:
 - Архитектура приложения: Clean Architecture <br>
-    <img src="modules/features/writer/.github/writer_diagram.jpg" height=300> <br>
+    <img src=".github/writer_diagram.jpg" height=300> <br>
 - Dependency management: GetX
 - State management: BLoC (не библиотека)
 - Анимация: Hero
