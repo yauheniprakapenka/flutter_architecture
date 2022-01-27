@@ -11,7 +11,7 @@ packages:
   about_app:
     dependency: "direct main"
     description:
-      path: "modules/about_app"
+      path: "packages/about_app"
       relative: true
     source: path
     version: "1.0.0"

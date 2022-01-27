@@ -1,7 +1,7 @@
 import 'package:domain/domain.dart';
 import 'package:flutter/material.dart';
 
-import '../../ui/utils/writer_hero_tag_factory.dart';
+import '../utils/writer_hero_tag_factory.dart';
 
 class WriterCard extends StatelessWidget {
   final Writer writer;

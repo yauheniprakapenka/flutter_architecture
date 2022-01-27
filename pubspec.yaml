@@ -13,7 +13,7 @@ dependencies:
   flutter_bloc: ^7.3.3
 
   about_app:
-    path: modules/about_app/
+    path: packages/about_app/
   domain:
     path: packages/domain/
 

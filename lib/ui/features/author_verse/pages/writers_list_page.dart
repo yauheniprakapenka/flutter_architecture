@@ -2,8 +2,8 @@ import 'package:domain/domain.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../ui/pages/writer_details_page.dart';
-import '../../ui/widgets/widgets.dart';
+import '../widgets/widgets.dart';
+import 'writer_details_page.dart';
 
 class WritersListPage extends StatelessWidget {
   const WritersListPage({Key? key}) : super(key: key);
