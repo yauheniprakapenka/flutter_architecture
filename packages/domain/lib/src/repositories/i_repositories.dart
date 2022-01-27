@@ -1,1 +1,1 @@
-export 'writer_repository/i_writer_repository.dart';
+export 'i_writer_repository.dart';
