@@ -1,11 +1,14 @@
-import 'package:data/data.dart';
-
 import '../entities/writer.dart';
-import '../repositories/i_repositories.dart';
+import '../repositories/i_writer_repository.dart';
 
 class GetAllWritersUseCase {
-  static Future<List<Writer>> call() async {
-    final _writerRepository = ServiceLocator.instance.get<IWriterRepository>();
+  final IWriterRepository _writerRepository;
+
+  const GetAllWritersUseCase({
+    required IWriterRepository writerRepository,
+  }) : _writerRepository = writerRepository;
+
+  Future<List<Writer>> call() async {
     return _writerRepository.getAllWriters();
   }
 }
