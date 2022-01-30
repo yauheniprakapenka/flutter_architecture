@@ -5,8 +5,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../features/author_verse/pages/writers_list_page.dart';
 import 'themes/writer_theme.dart';
 
-class RunApp extends StatelessWidget {
-  const RunApp({Key? key}) : super(key: key);
+class WriterApp extends StatelessWidget {
+  const WriterApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'ui/app/run_app.dart';
+import 'ui/app/writer_app.dart';
 
 void main() {
-  runApp(const RunApp());
+  runApp(const WriterApp());
 }
