@@ -121,7 +121,7 @@ packages:
     source: hosted
     version: "2.2.1"
   data:
-    dependency: transitive
+    dependency: "direct main"
     description:
       path: "packages/data"
       relative: true
@@ -168,7 +168,7 @@ packages:
     source: hosted
     version: "0.14.3"
   get_it:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: get_it
       url: "https://pub.dartlang.org"

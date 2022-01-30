@@ -11,11 +11,15 @@ dependencies:
     sdk: flutter
 
   flutter_bloc: ^7.3.3
-
-  about_app:
-    path: packages/about_app/
+  get_it: ^7.2.0
+ 
+  data:
+    path: packages/data/  
   domain:
     path: packages/domain/
+
+  about_app:
+    path: packages/about_app/  
 
 dev_dependencies: 
   dart_code_metrics: ^4.9.1    

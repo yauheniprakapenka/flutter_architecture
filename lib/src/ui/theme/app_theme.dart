@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-ThemeData writerTheme() {
+ThemeData appTheme() {
   return ThemeData(
     appBarTheme: _buildAppBarTheme(),
   );
