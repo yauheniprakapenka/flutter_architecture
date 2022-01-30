@@ -10,7 +10,6 @@ dependencies:
     sdk: flutter
 
   freezed_annotation: ^0.14.2
-  get_it: ^7.2.0
 
   domain:
     path: ../../packages/domain/
