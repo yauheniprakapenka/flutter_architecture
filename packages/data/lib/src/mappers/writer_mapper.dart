@@ -9,6 +9,7 @@ class WriterMapper {
     }).toList();
 
     return Writer(
+      id: writerDto.id,
       name: writerDto.name,
       avatar: writerDto.avatar,
       biography: writerDto.biography,

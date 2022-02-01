@@ -1,9 +1,10 @@
+import 'package:data/data.dart';
 import 'package:flutter/material.dart';
 
-import 'app/services/service_locator.dart';
 import 'app/writer_app.dart';
 
-void main() {
-  ServiceLocator.instance.initialize();
+Future<void> main() async {
+  DataServiceLocator.instance.init();
+  await initHiveService();
   runApp(const WriterApp());
 }

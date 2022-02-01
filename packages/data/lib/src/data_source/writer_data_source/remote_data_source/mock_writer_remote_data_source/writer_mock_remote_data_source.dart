@@ -1,8 +1,8 @@
-import '../../dto/writer_dto.dart';
-import '../i_writer_storage.dart';
+import '../../../../dto/writer_dto.dart';
+import '../interface/i_writer_remote_data_source.dart';
 import 'writers/writers.dart';
 
-class MockWriterStorage implements IWriterStorage {
+class WriterMockRemoteDataSource implements IWriterRemoteDataSource {
   @override
   Future<List<WriterDTO>> getAllWriters() async {
     await Future.delayed(const Duration(seconds: 1));

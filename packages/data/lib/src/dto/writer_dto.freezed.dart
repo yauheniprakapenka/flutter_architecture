@@ -18,11 +18,13 @@ class _$WriterDTOTearOff {
   const _$WriterDTOTearOff();
 
   _WriterDTO call(
-      {required String name,
+      {required int id,
+      required String name,
       required String avatar,
       required String biography,
       required List<VerseDTO> verses}) {
     return _WriterDTO(
+      id: id,
       name: name,
       avatar: avatar,
       biography: biography,
@@ -36,6 +38,7 @@ const $WriterDTO = _$WriterDTOTearOff();
 
 /// @nodoc
 mixin _$WriterDTO {
+  int get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   String get avatar => throw _privateConstructorUsedError;
   String get biography => throw _privateConstructorUsedError;
@@ -51,7 +54,11 @@ abstract class $WriterDTOCopyWith<$Res> {
   factory $WriterDTOCopyWith(WriterDTO value, $Res Function(WriterDTO) then) =
       _$WriterDTOCopyWithImpl<$Res>;
   $Res call(
-      {String name, String avatar, String biography, List<VerseDTO> verses});
+      {int id,
+      String name,
+      String avatar,
+      String biography,
+      List<VerseDTO> verses});
 }
 
 /// @nodoc
@@ -64,12 +71,17 @@ class _$WriterDTOCopyWithImpl<$Res> implements $WriterDTOCopyWith<$Res> {
 
   @override
   $Res call({
+    Object? id = freezed,
     Object? name = freezed,
     Object? avatar = freezed,
     Object? biography = freezed,
     Object? verses = freezed,
   }) {
     return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -97,7 +109,11 @@ abstract class _$WriterDTOCopyWith<$Res> implements $WriterDTOCopyWith<$Res> {
       __$WriterDTOCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String name, String avatar, String biography, List<VerseDTO> verses});
+      {int id,
+      String name,
+      String avatar,
+      String biography,
+      List<VerseDTO> verses});
 }
 
 /// @nodoc
@@ -111,12 +127,17 @@ class __$WriterDTOCopyWithImpl<$Res> extends _$WriterDTOCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? id = freezed,
     Object? name = freezed,
     Object? avatar = freezed,
     Object? biography = freezed,
     Object? verses = freezed,
   }) {
     return _then(_WriterDTO(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -141,11 +162,14 @@ class __$WriterDTOCopyWithImpl<$Res> extends _$WriterDTOCopyWithImpl<$Res>
 
 class _$_WriterDTO implements _WriterDTO {
   _$_WriterDTO(
-      {required this.name,
+      {required this.id,
+      required this.name,
       required this.avatar,
       required this.biography,
       required this.verses});
 
+  @override
+  final int id;
   @override
   final String name;
   @override
@@ -157,13 +181,15 @@ class _$_WriterDTO implements _WriterDTO {
 
   @override
   String toString() {
-    return 'WriterDTO(name: $name, avatar: $avatar, biography: $biography, verses: $verses)';
+    return 'WriterDTO(id: $id, name: $name, avatar: $avatar, biography: $biography, verses: $verses)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _WriterDTO &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.name, name) ||
                 const DeepCollectionEquality().equals(other.name, name)) &&
             (identical(other.avatar, avatar) ||
@@ -178,6 +204,7 @@ class _$_WriterDTO implements _WriterDTO {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(avatar) ^
       const DeepCollectionEquality().hash(biography) ^
@@ -191,11 +218,14 @@ class _$_WriterDTO implements _WriterDTO {
 
 abstract class _WriterDTO implements WriterDTO {
   factory _WriterDTO(
-      {required String name,
+      {required int id,
+      required String name,
       required String avatar,
       required String biography,
       required List<VerseDTO> verses}) = _$_WriterDTO;
 
+  @override
+  int get id => throw _privateConstructorUsedError;
   @override
   String get name => throw _privateConstructorUsedError;
   @override

@@ -1,7 +1,7 @@
-import '../../../dto/verse_dto.dart';
-import '../../../dto/writer_dto.dart';
+import '../../../../../dto/dto.dart';
 
 final akhmatovaAnna = WriterDTO(
+  id: 101,
   name: 'Анна Ахматова',
   avatar: 'assets/writers/ahmatova.jpg',
   biography:

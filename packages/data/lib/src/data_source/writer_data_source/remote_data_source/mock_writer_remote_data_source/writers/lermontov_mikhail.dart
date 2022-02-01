@@ -1,7 +1,7 @@
-import '../../../dto/verse_dto.dart';
-import '../../../dto/writer_dto.dart';
+import '../../../../../dto/dto.dart';
 
 final lermontovMikhail = WriterDTO(
+  id: 104,
   name: 'Михаил Лермонтов',
   avatar: 'assets/writers/lermontov.jpg',
   biography:

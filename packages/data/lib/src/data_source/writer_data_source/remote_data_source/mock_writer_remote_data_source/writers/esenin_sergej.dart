@@ -1,7 +1,7 @@
-import '../../../dto/verse_dto.dart';
-import '../../../dto/writer_dto.dart';
+import '../../../../../dto/dto.dart';
 
 final eseninSergej = WriterDTO(
+  id: 103,
   name: 'Сергей Есенин',
   avatar: 'assets/writers/esenin.jpg',
   biography:

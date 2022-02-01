@@ -1,7 +1,7 @@
-import '../../../dto/verse_dto.dart';
-import '../../../dto/writer_dto.dart';
+import '../../../../../dto/dto.dart';
 
 final bartoAgniya = WriterDTO(
+  id: 102,
   name: 'Агния Барто',
   avatar: 'assets/writers/barto.jpg',
   biography:

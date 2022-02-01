@@ -2,15 +2,18 @@ import 'package:domain/domain.dart';
 import 'package:flutter/material.dart';
 
 import '../utils/writer_hero_tag_factory.dart';
+import 'bookmark_icon.dart';
 
 class WriterCard extends StatelessWidget {
   final Writer writer;
   final GestureTapCallback onPressed;
+  final bool isBookmarked;
 
   const WriterCard({
     Key? key,
     required this.writer,
     required this.onPressed,
+    required this.isBookmarked,
   }) : super(key: key);
 
   @override
@@ -28,34 +31,43 @@ class WriterCard extends StatelessWidget {
             color: Colors.grey[300] ?? Colors.white,
           ),
         ),
-        child: Row(
+        child: Stack(
           children: [
-            Expanded(
-              child: Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Column(
-                      children: [
-                        _WriterName(
-                          writer: writer,
+            Row(
+              children: [
+                Expanded(
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          children: [
+                            _WriterName(
+                              writer: writer,
+                            ),
+                            const SizedBox(height: 16),
+                            _WriterBiography(
+                              bio: writer.biography,
+                            ),
+                          ],
                         ),
-                        const SizedBox(height: 16),
-                        _WriterBiography(
-                          bio: writer.biography,
-                        ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
-                ],
-              ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: _WriterAvatar(
+                    writer: writer,
+                  ),
+                ),
+              ],
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: _WriterAvatar(
-                writer: writer,
+            if (isBookmarked)
+              const Positioned(
+                right: 14,
+                child: BookmarkIcon(),
               ),
-            ),
           ],
         ),
       ),

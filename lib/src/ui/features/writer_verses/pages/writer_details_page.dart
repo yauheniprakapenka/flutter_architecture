@@ -1,21 +1,31 @@
 import 'package:domain/domain.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../bloc/writer_bloc/writer_bloc.dart';
+import '../bloc/writer_bloc/writer_events/events/bookmark_writer_event.dart';
 import '../utils/writer_hero_tag_factory.dart';
 
 class WriterDetailsPage extends StatelessWidget {
   final Writer writer;
 
-  const WriterDetailsPage({
-    Key? key,
-    required this.writer,
-  }) : super(key: key);
+  const WriterDetailsPage({Key? key, required this.writer}) : super(key: key);
 
   @override
   Widget build(context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(writer.name),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.favorite),
+            onPressed: () {
+              BlocProvider.of<WriterBloc>(context).add(
+                BookmarkWriterEvent(writer.id),
+              );
+            },
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(
