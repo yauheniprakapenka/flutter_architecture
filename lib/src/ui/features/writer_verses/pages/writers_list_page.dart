@@ -1,4 +1,3 @@
-import 'package:data/data.dart';
 import 'package:domain/domain.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -33,13 +32,8 @@ class _WritersList extends StatelessWidget {
         return state.isLoading
             ? const Center(child: CircularProgressIndicator.adaptive())
             : RefreshIndicator(
-                // ignore: prefer-extracting-callbacks
                 onRefresh: () async {
                   context.read<WriterBloc>().add(GetAllWritersEvent());
-                  await GetAllBookmarkedWritersIdUseCase(
-                    writerRepository:
-                        DataServiceLocator.instance.get<IWriterRepository>(),
-                  ).call();
                 },
                 child: SingleChildScrollView(
                   child: Column(
@@ -47,8 +41,7 @@ class _WritersList extends StatelessWidget {
                       final writer = state.writers[index];
                       return WriterCard(
                           writer: writer,
-                          isBookmarked:
-                              state.bookmarkedWritersId.contains(writer.id),
+                          isBookmarked: state.bookmarkedWritersId.contains(writer.id),
                           onPressed: () {
                             _onWriterCardPressed(context, writer);
                           });
@@ -59,15 +52,15 @@ class _WritersList extends StatelessWidget {
       },
     );
   }
-}
 
-Future<void> _onWriterCardPressed(BuildContext context, Writer writer) async {
-  await Navigator.push(
-    context,
-    MaterialPageRoute(
-      builder: (context) {
-        return WriterDetailsPage(writer: writer);
-      },
-    ),
-  );
+  Future<void> _onWriterCardPressed(BuildContext context, Writer writer) async {
+    await Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) {
+          return WriterDetailsPage(writer: writer);
+        },
+      ),
+    );
+  }
 }

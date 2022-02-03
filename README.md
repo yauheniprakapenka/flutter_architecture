@@ -6,11 +6,19 @@
 
 Учебный проект для просмотра писателей и их стихотворений. 
 
-О проекте:
+Окружение:
 
 - Архитектура приложения: Clean Architecture, модульность
 - Service locator: GetIt v7.2.0
 - State management: flutter_bloc v7.3.3
+
+О проекте:
+
+- Просмотр списка всех авторов
+- Просмотр стихотворений каждого автора
+- Возможность добавить автора в избранное
+- Для локального хранения используется Hive
+- Иконка закладки нарисована программно
 
 
 Демо:
@@ -31,9 +39,6 @@
 modules/libraries/about_app/README.md
 ```
 
-Демо:
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="modules/about_app/.github/about_app_demo.gif" width=600>
 
 <br>
 

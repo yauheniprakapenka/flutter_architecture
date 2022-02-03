@@ -7,30 +7,25 @@ import 'writer_events/writer_events.dart';
 import 'writer_state.dart';
 
 class WriterBloc extends Bloc<IWriterEvent, WriterState> {
-  final _writerRepository =
-      DataServiceLocator.instance.get<IWriterRepository>();
+  final _writerRepository = DataServiceLocator.instance.get<IWriterRepository>();
 
   WriterBloc() : super(const WriterState());
 
   @override
   Stream<WriterState> mapEventToState(IWriterEvent event) async* {
+    if (event is GetAllBookmarkedWritersIdEvent) {
+      final bookmarkedWritersId = await _getAllBookmarkedWritersIdUseCase();
+      yield state.copyWith(bookmarkedWritersId: bookmarkedWritersId, isLoading: false);
+      return;
+    }
+
     if (event is GetAllWritersEvent) {
       yield state.copyWith(isLoading: true);
       try {
-        final getAllWritersUseCase = GetAllWritersUseCase(
-          writerRepository: _writerRepository,
-        );
+        final getAllWritersUseCase = GetAllWritersUseCase(writerRepository: _writerRepository);
         final writers = await getAllWritersUseCase();
-        final getAllBookmarkedWritersIdUseCase =
-            GetAllBookmarkedWritersIdUseCase(
-          writerRepository: _writerRepository,
-        );
-        final bookmarkedWritersId = await getAllBookmarkedWritersIdUseCase();
-        yield state.copyWith(
-          writers: writers,
-          bookmarkedWritersId: bookmarkedWritersId,
-          isLoading: false,
-        );
+        final bookmarkedWritersId = await _getAllBookmarkedWritersIdUseCase();
+        yield state.copyWith(writers: writers, bookmarkedWritersId: bookmarkedWritersId, isLoading: false);
       } on Exception catch (e) {
         debugPrint(e.toString());
         yield state.copyWith(writers: [], isLoading: false);
@@ -43,6 +38,8 @@ class WriterBloc extends Bloc<IWriterEvent, WriterState> {
         writerRepository: _writerRepository,
       );
       await bookmarkWriterUseCase(event.id);
+      final bookmarkedWritersId = await _getAllBookmarkedWritersIdUseCase();
+      yield state.copyWith(bookmarkedWritersId: bookmarkedWritersId);
       return;
     }
 
@@ -51,7 +48,14 @@ class WriterBloc extends Bloc<IWriterEvent, WriterState> {
         writerRepository: _writerRepository,
       );
       await unbookmarkWriterUseCase(event.id);
+      final bookmarkedWritersId = await _getAllBookmarkedWritersIdUseCase();
+      yield state.copyWith(bookmarkedWritersId: bookmarkedWritersId);
       return;
     }
+  }
+
+  Future<Set<int>> _getAllBookmarkedWritersIdUseCase() async {
+    final getAllBookmarkedWritersIdUseCase = GetAllBookmarkedWritersIdUseCase(writerRepository: _writerRepository);
+    return getAllBookmarkedWritersIdUseCase();
   }
 }

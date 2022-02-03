@@ -28,7 +28,7 @@ class WriterCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(12),
           border: Border.all(
             width: 2,
-            color: Colors.grey[300] ?? Colors.white,
+            color: Colors.grey[300] ?? Colors.red,
           ),
         ),
         child: Stack(
