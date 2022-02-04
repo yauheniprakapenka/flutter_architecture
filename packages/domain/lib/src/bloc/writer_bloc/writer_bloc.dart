@@ -1,15 +1,17 @@
 import 'package:data/data.dart';
-import 'package:domain/domain.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'writer_events/writer_events.dart';
-import 'writer_state.dart';
+import '../../../domain.dart';
+import '../../use_cases/writer_use_cases/writer_use_cases.dart';
 
 class WriterBloc extends Bloc<IWriterEvent, WriterState> {
-  final _writerRepository = DataServiceLocator.instance.get<IWriterRepository>();
+  late final IWriterRepository _writerRepository;
 
-  WriterBloc() : super(const WriterState());
+  WriterBloc() : super(const WriterState()) {
+    DataServiceLocator.instance.init();
+    _writerRepository = DataServiceLocator.instance.get<IWriterRepository>();
+  }
 
   @override
   Stream<WriterState> mapEventToState(IWriterEvent event) async* {

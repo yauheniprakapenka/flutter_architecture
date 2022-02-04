@@ -12,11 +12,11 @@ class DataServiceLocator {
   T get<T extends Object>() => _getIt.get<T>();
 
   void init() {
-    _getIt.registerLazySingleton<IWriterRepository>(
-      () => WriterRepositoryImpl(
-        localDataSource: WriterHiveLocalDataSource(),
-        remoteDataSource: WriterMockRemoteDataSource(),
-      ),
-    );
-  }
+      _getIt.registerLazySingleton<IWriterRepository>(
+        () => WriterRepositoryImpl(
+          localDataSource: WriterHiveLocalDataSource(),
+          remoteDataSource: WriterMockRemoteDataSource(),
+        ),
+      );
+    }
 }

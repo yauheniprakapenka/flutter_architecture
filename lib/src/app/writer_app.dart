@@ -1,8 +1,7 @@
+import 'package:domain/domain.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../ui/features/writer_verses/bloc/writer_bloc/writer_bloc.dart';
-import '../ui/features/writer_verses/bloc/writer_bloc/writer_events/events/get_all_writers_event.dart';
 import '../ui/features/writer_verses/pages/writers_list_page.dart';
 import 'theme/writer_theme.dart';
 

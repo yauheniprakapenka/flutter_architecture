@@ -1,7 +1,7 @@
 import 'package:domain/domain.dart';
 import 'package:flutter/material.dart';
 
-import '../utils/writer_hero_tag_factory.dart';
+import '../builders/writer_hero_tag_factory.dart';
 import 'bookmark_icon.dart';
 
 class WriterCard extends StatelessWidget {
@@ -107,7 +107,7 @@ class _WriterAvatar extends StatelessWidget {
   @override
   Widget build(context) {
     return Hero(
-      tag: WriterHeroTagFactory.makeWriterAvatarTag(writer),
+      tag: buildWriterAvatarTag(writer),
       child: Container(
         height: 100,
         width: 100,

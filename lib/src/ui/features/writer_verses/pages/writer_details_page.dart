@@ -2,11 +2,7 @@ import 'package:domain/domain.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../bloc/writer_bloc/writer_bloc.dart';
-import '../bloc/writer_bloc/writer_events/events/bookmark_writer_event.dart';
-import '../bloc/writer_bloc/writer_events/events/unbookmark_writer_event.dart';
-import '../bloc/writer_bloc/writer_state.dart';
-import '../utils/writer_hero_tag_factory.dart';
+import '../builders/writer_hero_tag_factory.dart';
 
 class WriterDetailsPage extends StatelessWidget {
   final Writer writer;
@@ -27,9 +23,7 @@ class WriterDetailsPage extends StatelessWidget {
                 color: isWriterBookmarked ? Colors.white : Colors.grey[600],
               ),
               onPressed: () {
-                isWriterBookmarked
-                    ? context.read<WriterBloc>().add(UnbookmarkWriterEvent(writer.id))
-                    : context.read<WriterBloc>().add(BookmarkWriterEvent(writer.id));
+                isWriterBookmarked ? context.read<WriterBloc>().add(UnbookmarkWriterEvent(writer.id)) : context.read<WriterBloc>().add(BookmarkWriterEvent(writer.id));
               },
             ),
           ],
@@ -38,7 +32,7 @@ class WriterDetailsPage extends StatelessWidget {
           child: Column(
             children: [
               Hero(
-                tag: WriterHeroTagFactory.makeWriterAvatarTag(writer),
+                tag: buildWriterAvatarTag(writer),
                 child: SizedBox(
                   height: 200,
                   width: double.maxFinite,
