@@ -1,7 +1,7 @@
 import 'package:domain/domain.dart';
 
-import '../data_source/writer_data_source/local_data_source/interface/i_writer_local_data_source.dart';
-import '../data_source/writer_data_source/remote_data_source/interface/i_writer_remote_data_source.dart';
+import '../data_source/local/interface/i_writer_local_data_source.dart';
+import '../data_source/remote/interface/i_writer_remote_data_source.dart';
 import '../mappers/writer_mapper.dart';
 
 class WriterRepositoryImpl implements IWriterRepository {

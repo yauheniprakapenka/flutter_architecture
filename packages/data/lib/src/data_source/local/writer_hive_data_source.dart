@@ -2,7 +2,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 
 import 'interface/i_writer_local_data_source.dart';
 
-class WriterHiveLocalDataSource implements IWriterLocalDataSource {
+class WriterHiveDataSource implements IWriterLocalDataSource {
   static const _writerBox = 'writerBoxNew';
   static const _writerKey = 'writerBoxKeyNew';
 

@@ -1,8 +1,8 @@
 import 'package:domain/domain.dart';
 import 'package:get_it/get_it.dart';
 
-import '../data_source/writer_data_source/local_data_source/writer_hive_local_data_source.dart';
-import '../data_source/writer_data_source/remote_data_source/mock_writer_remote_data_source/writer_mock_remote_data_source.dart';
+import '../data_source/local/writer_hive_data_source.dart';
+import '../data_source/remote/writer_mock_data_source.dart/writer_mock_data_source.dart';
 import '../repositories/writer_repository_impl.dart';
 
 class DataServiceLocator {
@@ -14,8 +14,8 @@ class DataServiceLocator {
   void init() {
       _getIt.registerLazySingleton<IWriterRepository>(
         () => WriterRepositoryImpl(
-          localDataSource: WriterHiveLocalDataSource(),
-          remoteDataSource: WriterMockRemoteDataSource(),
+          localDataSource: WriterHiveDataSource(),
+          remoteDataSource: WriterMockDataSource(),
         ),
       );
     }

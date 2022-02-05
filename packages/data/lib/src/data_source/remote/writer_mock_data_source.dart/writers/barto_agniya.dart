@@ -1,4 +1,4 @@
-import '../../../../../dto/dto.dart';
+import '../../../../dto/dto.dart';
 
 final bartoAgniya = WriterDTO(
   id: 102,
