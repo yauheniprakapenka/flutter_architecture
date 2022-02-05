@@ -1,6 +1,7 @@
 import '../entities/writer.dart';
 
 abstract class IWriterRepository {
+  /// Get data from remote storage.
   Future<List<Writer>> getAllWriters();
 
   /// Get data from local storage.

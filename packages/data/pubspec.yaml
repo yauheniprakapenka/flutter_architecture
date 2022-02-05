@@ -9,7 +9,6 @@ dependencies:
   flutter:
     sdk: flutter
 
-  freezed_annotation: ^0.14.2
   get_it: ^7.2.0
   hive: ^2.0.5
   hive_flutter: ^1.1.0
@@ -20,8 +19,6 @@ dependencies:
 dev_dependencies: 
   dart_code_metrics: ^4.9.1    
   flutter_lints: ^1.0.4
-  build_runner: ^2.0.5
-  freezed: ^0.14.2 
 
 flutter:
   assets:

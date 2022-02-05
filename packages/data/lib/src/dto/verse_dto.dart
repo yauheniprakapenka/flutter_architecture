@@ -1,11 +1,9 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+class VerseDTO {
+  final String title;
+  final String text;
 
-part 'verse_dto.freezed.dart';
-
-@freezed
-class VerseDTO with _$VerseDTO {
-  factory VerseDTO({
-    required String title,
-    required String text,
-  }) = _VerseDTO;
+  VerseDTO({
+    required this.title,
+    required this.text,
+  });
 }

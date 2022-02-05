@@ -57,7 +57,6 @@ class WriterBloc extends Bloc<IWriterEvent, WriterState> {
   }
 
   Future<Set<int>> _getAllBookmarkedWritersIdUseCase() async {
-    final getAllBookmarkedWritersIdUseCase = GetAllBookmarkedWritersIdUseCase(writerRepository: _writerRepository);
-    return getAllBookmarkedWritersIdUseCase();
+    return GetAllBookmarkedWritersIdUseCase(writerRepository: _writerRepository).call();
   }
 }
