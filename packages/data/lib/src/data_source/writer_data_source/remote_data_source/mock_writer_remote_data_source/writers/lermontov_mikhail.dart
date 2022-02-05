@@ -3,7 +3,7 @@ import '../../../../../dto/dto.dart';
 final lermontovMikhail = WriterDTO(
   id: 104,
   name: 'Михаил Лермонтов',
-  avatar: 'assets/writers/lermontov.jpg',
+  avatar: 'assets/images/writers/lermontov.jpg',
   biography:
       'Один из самых известных русских поэтов, и признание к нему пришло еще при жизни. Его творчество, в котором сочетались острые социальные темы с философскими мотивами и личными переживаниями, оказало огромное влияние на поэтов и писателей XIX–XX веков.',
   verses: [

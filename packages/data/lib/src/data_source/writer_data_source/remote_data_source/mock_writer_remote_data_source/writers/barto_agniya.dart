@@ -3,7 +3,7 @@ import '../../../../../dto/dto.dart';
 final bartoAgniya = WriterDTO(
   id: 102,
   name: 'Агния Барто',
-  avatar: 'assets/writers/barto.jpg',
+  avatar: 'assets/images/writers/barto.jpg',
   biography:
       'Стихи отличаются простотой чтения и запоминания. Через них автор на равных обращалась к ребёнку простым языком без лирических отступлений и описаний. ',
   verses: [

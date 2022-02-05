@@ -3,7 +3,7 @@ import '../../../../../dto/dto.dart';
 final eseninSergej = WriterDTO(
   id: 103,
   name: 'Сергей Есенин',
-  avatar: 'assets/writers/esenin.jpg',
+  avatar: 'assets/images/writers/esenin.jpg',
   biography:
       'Сначала выступал в лаптях и рубахе с новокрестьянскими поэтами, затем, облачившись в пиджак и галстук, создавал с имажинистами новую литературу.',
   verses: [

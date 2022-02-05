@@ -3,7 +3,7 @@ import '../../../../../dto/dto.dart';
 final akhmatovaAnna = WriterDTO(
   id: 101,
   name: 'Анна Ахматова',
-  avatar: 'assets/writers/ahmatova.jpg',
+  avatar: 'assets/images/writers/ahmatova.jpg',
   biography:
       'Она стала свидетелем смены эпох — пережила две мировые войны, революцию и блокаду Ленинграда. Свое первое стихотворение Ахматова написала в 11 лет — с тех пор и до конца жизни она не переставала заниматься поэзией.',
   verses: [
