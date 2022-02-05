@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../ui/features/writer_verses/pages/writers_list_page.dart';
-import 'theme/writer_theme.dart';
+import '../ui/shared/themes/writer_theme.dart';
 
 class WriterApp extends StatelessWidget {
   const WriterApp({Key? key}) : super(key: key);
